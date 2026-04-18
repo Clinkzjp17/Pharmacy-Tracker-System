@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>PharmaTrack</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Products</li>
+            <li>Stocks</li>
+            <li>Users</li>
+            <li>Expiry</li>
+            <li>Low Stock</li>
+            <li>Stock In</li>
+            <li>Stock Out</li>
+            <li><a href="admin-login.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>Admin Dashboard</h1>
+            <p>Welcome, Admin</p>
+        </div>
+
+        <!-- SUMMARY CARDS -->
+        <div class="cards">
+            <div class="card">
+                <h3>250</h3>
+                <p>Total Products</p>
+            </div>
+
+            <div class="card">
+                <h3>270</h3>
+                <p>In Stock</p>
+            </div>
+
+            <div class="card">
+                <h3>20</h3>
+                <p>Low Stock</p>
+            </div>
+
+            <div class="card">
+                <h3>2</h3>
+                <p>Out of Stock</p>
+            </div>
+        </div>
+
+        <!-- GRID CONTENT -->
+        <div class="grid">
+
+            <!-- LEFT: INVENTORY -->
+            <div class="box">
+                <h2>Medicine Inventory</h2>
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Biogesic</td>
+                        <td>Analgesic</td>
+                        <td>100</td>
+                        <td>₱6</td>
+                        <td>In Stock</td>
+                    </tr>
+                    <tr>
+                        <td>Cetirizine</td>
+                        <td>Antihistamine</td>
+                        <td>10</td>
+                        <td>₱10</td>
+                        <td>Low Stock</td>
+                    </tr>
+                    <tr>
+                        <td>Amoxicillin</td>
+                        <td>Antibiotic</td>
+                        <td>0</td>
+                        <td>₱10</td>
+                        <td>Out of Stock</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="side-boxes">
+
+                <!-- ALERTS -->
+                <div class="box">
+                    <h3>Alerts</h3>
+                    <ul>
+                        <li>Cetirizine is low on stock</li>
+                        <li>Amoxicillin is out of stock</li>
+                        <li>Biogesic expires soon</li>
+                    </ul>
+                </div>
+
+                <!-- STOCK IN -->
+                <div class="box">
+                    <h3>Recent Stock In</h3>
+                    <ul>
+                        <li>Biogesic +50</li>
+                        <li>Neozep +30</li>
+                    </ul>
+                </div>
+
+                <!-- STOCK OUT -->
+                <div class="box">
+                    <h3>Recent Stock Out</h3>
+                    <ul>
+                        <li>Amoxicillin -20</li>
+                        <li>Cetirizine -15</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
