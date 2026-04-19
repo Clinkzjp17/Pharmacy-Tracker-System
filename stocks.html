@@ -15,7 +15,6 @@
 </head>
 <body>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
   <div class="sidebar-logo">
     <div class="logo-icon"></div>
@@ -67,18 +66,14 @@
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="main-content">
 
-  <!-- PAGE HEADER -->
   <div class="page-header">
     <h1>Stocks In/Out</h1>
   </div>
 
-  <!-- PAGE BODY -->
   <div class="page-body">
 
-    <!-- TOGGLE CARDS -->
     <div class="stock-toggle">
       <div class="stock-toggle-card active-in" id="toggle-in" onclick="switchMode('in')">
         <div class="toggle-icon green-icon">+</div>
@@ -99,13 +94,9 @@
       </div>
     </div>
 
-    <!-- ========================= -->
-    <!-- STOCK IN SECTION          -->
-    <!-- ========================= -->
     <div class="stock-form-section visible" id="section-in">
       <div class="stocks-grid">
 
-        <!-- LOG STOCK IN FORM -->
         <div class="log-form-panel">
           <h3>Log Stock In</h3>
 
@@ -168,7 +159,6 @@
           </div>
         </div>
 
-        <!-- STOCK IN HISTORY -->
         <div class="panel">
           <div class="panel-header">
             Stock In History
@@ -230,13 +220,9 @@
       </div>
     </div>
 
-    <!-- ========================= -->
-    <!-- STOCK OUT SECTION         -->
-    <!-- ========================= -->
     <div class="stock-form-section" id="section-out">
       <div class="stocks-grid">
 
-        <!-- LOG STOCK OUT FORM -->
         <div class="log-form-panel">
           <h3>Log Stock Out</h3>
 
@@ -380,14 +366,12 @@
     }
   }
 
-  // Live qty calculation – Stock In
   document.getElementById('qty-in').addEventListener('input', function() {
     const v = parseInt(this.value) || 0;
     document.getElementById('to-add-in').textContent    = v + ' pcs';
     document.getElementById('new-total-in').textContent = (currentStock + v) + ' pcs';
   });
 
-  // Live qty calculation – Stock Out
   document.getElementById('qty-out').addEventListener('input', function() {
     const v = parseInt(this.value) || 0;
     document.getElementById('to-deduct-out').textContent = v + ' pcs';

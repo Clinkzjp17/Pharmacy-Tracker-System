@@ -745,9 +745,6 @@ body {
 
 .btn-confirm:hover { background: #0a3d42; }
 
-/* ============================
-   RESPONSIVE
-   ============================ */
 @media (max-width: 900px) {
   :root { --sidebar-width: 60px; }
   .sidebar-logo .logo-text,
