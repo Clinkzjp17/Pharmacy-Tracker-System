@@ -1,137 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<!-- LINK CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- ✅ ADD ICON LIBRARY -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
 
-<div class="dashboard">
+<div class="pt-dashboard">
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h2>PharmaTrack</h2>
-        <ul>
-            <li>Dashboard</li>
-            <li>Products</li>
-            <li>Stocks</li>
-            <li>Users</li>
-            <li>Expiry</li>
-            <li>Low Stock</li>
-            <li>Stock In</li>
-            <li>Stock Out</li>
-            <li><a href="admin-login.html">Logout</a></li>
-        </ul>
+<div class="pt-sidebar">
+
+    <!-- ✅ UPDATED LOGO -->
+    <div class="pt-logo logo">
+    <div class="icon-plus"></div>
+    PharmaTrack<br>
+    <small>Admin</small>
+</div>
+
+
+    <div class="pt-menu">
+        <div class="pt-menu-title">MAIN</div>
+
+        <!-- ✅ MENU WITH ICONS -->
+        <div class="pt-menu-link pt-menu-link-active" onclick="ptNavigate(this,'Dashboard')">
+            <i class="fas fa-chart-line"></i> Dashboard
+        </div>
+
+        <div class="pt-menu-link" onclick="ptNavigate(this,'Products')">
+            <i class="fas fa-pills"></i> Products
+        </div>
+
+        <div class="pt-menu-link" onclick="ptNavigate(this,'Stocks')">
+            <i class="fas fa-boxes"></i> Stocks
+        </div>
+
+        <div class="pt-menu-link" onclick="ptNavigate(this,'Users')">
+            <i class="fas fa-users"></i> Users
+        </div>
+
+        <div class="pt-menu-title">MONITORING</div>
+
+        <div class="pt-menu-link" onclick="ptNavigate(this,'Expiry')">
+            <i class="fas fa-calendar-times"></i> Expiry
+        </div>
+
+        <div class="pt-menu-link" onclick="ptNavigate(this,'Low Stock')">
+            <i class="fas fa-exclamation-triangle"></i> Low Stock
+        </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div class="main">
-
-        <!-- HEADER -->
-        <div class="header">
-            <h1>Admin Dashboard</h1>
-            <p>Welcome, Admin</p>
-        </div>
-
-        <!-- SUMMARY CARDS -->
-        <div class="cards">
-            <div class="card">
-                <h3>250</h3>
-                <p>Total Products</p>
-            </div>
-
-            <div class="card">
-                <h3>270</h3>
-                <p>In Stock</p>
-            </div>
-
-            <div class="card">
-                <h3>20</h3>
-                <p>Low Stock</p>
-            </div>
-
-            <div class="card">
-                <h3>2</h3>
-                <p>Out of Stock</p>
-            </div>
-        </div>
-
-        <!-- GRID CONTENT -->
-        <div class="grid">
-
-            <!-- LEFT: INVENTORY -->
-            <div class="box">
-                <h2>Medicine Inventory</h2>
-                <table>
-                    <tr>
-                        <th>Product</th>
-                        <th>Category</th>
-                        <th>Qty</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                    </tr>
-                    <tr>
-                        <td>Biogesic</td>
-                        <td>Analgesic</td>
-                        <td>100</td>
-                        <td>₱6</td>
-                        <td>In Stock</td>
-                    </tr>
-                    <tr>
-                        <td>Cetirizine</td>
-                        <td>Antihistamine</td>
-                        <td>10</td>
-                        <td>₱10</td>
-                        <td>Low Stock</td>
-                    </tr>
-                    <tr>
-                        <td>Amoxicillin</td>
-                        <td>Antibiotic</td>
-                        <td>0</td>
-                        <td>₱10</td>
-                        <td>Out of Stock</td>
-                    </tr>
-                </table>
-            </div>
-
-            <!-- RIGHT SIDE -->
-            <div class="side-boxes">
-
-                <!-- ALERTS -->
-                <div class="box">
-                    <h3>Alerts</h3>
-                    <ul>
-                        <li>Cetirizine is low on stock</li>
-                        <li>Amoxicillin is out of stock</li>
-                        <li>Biogesic expires soon</li>
-                    </ul>
-                </div>
-
-                <!-- STOCK IN -->
-                <div class="box">
-                    <h3>Recent Stock In</h3>
-                    <ul>
-                        <li>Biogesic +50</li>
-                        <li>Neozep +30</li>
-                    </ul>
-                </div>
-
-                <!-- STOCK OUT -->
-                <div class="box">
-                    <h3>Recent Stock Out</h3>
-                    <ul>
-                        <li>Amoxicillin -20</li>
-                        <li>Cetirizine -15</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-
+    <div class="pt-admin">
+        <i class="fas fa-user-shield"></i> Admin<br>
+        <small>Administrator</small>
     </div>
+</div>
+
+<div class="pt-main">
+
+<div class="pt-header">ADMIN DASHBOARD</div>
+
+<div class="pt-cards">
+    <div class="pt-card">Total Products<br><h2>250</h2></div>
+    <div class="pt-card">In Stock<br><h2>270</h2></div>
+    <div class="pt-card">Low Stock<br><h2>20</h2></div>
+    <div class="pt-card">Out of Stock<br><h2>2</h2></div>
+</div>
+
+<div class="pt-grid">
+
+<div class="pt-box">
+<h3>Medicine Inventory</h3>
+<table class="pt-table">
+<tr>
+<th>Product</th><th>Category</th><th>Qty</th><th>Price</th><th>Status</th>
+</tr>
+
+<tr>
+<td>Biogesic</td><td>Analgesic</td><td>100</td><td>₱6.00</td>
+<td><button class="pt-btn pt-status pt-status-in" onclick="ptStatus('Biogesic','In Stock')">In Stock</button></td>
+</tr>
+
+<tr>
+<td>Neozep</td><td>Analgesic</td><td>150</td><td>₱6.00</td>
+<td><button class="pt-btn pt-status pt-status-in" onclick="ptStatus('Neozep','In Stock')">In Stock</button></td>
+</tr>
+
+<tr>
+<td>Cetirizine</td><td>Antihistamine</td><td>10</td><td>₱10.00</td>
+<td><button class="pt-btn pt-status pt-status-low" onclick="ptStatus('Cetirizine','Low Stock')">Low Stock</button></td>
+</tr>
+
+<tr>
+<td>Amoxicillin</td><td>Antibiotic</td><td>0</td><td>₱10.00</td>
+<td><button class="pt-btn pt-status pt-status-out" onclick="ptStatus('Amoxicillin','Out of Stock')">Out of Stock</button></td>
+</tr>
+
+</table>
+</div>
+
+<div class="pt-box">
+<h3>Alerts</h3>
+<div class="pt-list-item"><span>Cetirizine low stock</span><span>April 10</span></div>
+<div class="pt-list-item"><span>Amoxicillin out</span><span>April 10</span></div>
+<div class="pt-list-item"><span>Biogesic expires</span><span>April 9</span></div>
+</div>
 
 </div>
+
+<div class="pt-bottom">
+
+<div class="pt-box">
+<h3>Recent Stock In</h3>
+<div class="pt-list-item">
+<span>Biogesic +50</span>
+<button class="pt-btn pt-tag pt-tag-in" onclick="ptStock('Biogesic','IN')">Stock in</button>
+</div>
+</div>
+
+<div class="pt-box">
+<h3>Recent Stock Out</h3>
+<div class="pt-list-item">
+<span>Neozep -50</span>
+<button class="pt-btn pt-tag pt-tag-out" onclick="ptStock('Neozep','OUT')">Stock out</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LINK JS -->
+<script src="dashboard.js"></script>
 
 </body>
 </html>
